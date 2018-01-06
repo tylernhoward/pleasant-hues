@@ -1,0 +1,41 @@
+.App-title {
+    font-weight: 300;
+    letter-spacing: 5px;
+    color:white;
+}
+#l1:hover {
+    color: #FF4136;
+}
+#l2:hover {
+    color: #FF851B;
+}
+#l3:hover {
+    color: #FFDC00;
+}
+#l4:hover {color:#2ECC40;}
+#l5:hover {
+    color: #0074D9;
+}
+#l6:hover {
+    color: #B10DC9;
+}
+#l7:hover {
+    color: #F012BE;
+}
+#l8:hover {
+    color: #FF4136;
+}
+#l9:hover {
+    color: #FF851B;
+}
+#l10:hover {
+    color: #FFDC00;
+}
+#l11:hover{color:#2ECC40;}
+#l12:hover {
+    color: #0074D9;
+}
+.App-intro {
+    color:#AAAAAA;
+    letter-spacing: 3px;
+}

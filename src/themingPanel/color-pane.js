@@ -7,11 +7,56 @@ class ColorPane extends Component {
        return(
             <div className = "color-pane">
                 <h4>Fill in the colors below</h4>
-                <span>Color 1</span>
-                <input type="text" placeholder= "#..."/>
-                <button>Choose</button>
-                <p>3</p>
-               <ColorPicker />
+                <div className="colorOptions">
+                    <div className="column">
+                        <div className="colorPrompt">
+                        <span>Color 1</span>
+                        <input type="text" placeholder= "#..."/>
+                        <button>Choose</button>
+                        </div>
+                        <span>Color 2</span>
+                        <input type="text" placeholder="#..." />
+                        <button>Choose</button>
+                        <span>Color 3</span>
+                        <input type="text" placeholder="#..." />
+                        <button>Choose</button>
+                        <span>Color 4</span>
+                        <input type="text" placeholder="#..." />
+                        <button>Choose</button>
+                        <span>Color 5</span>
+                        <input type="text" placeholder="#..." />
+                        <button>Choose</button>
+                        <span>Color 6</span>
+                        <input type="text" placeholder="#..." />
+                        <button>Choose</button>
+                        <span>Color 7</span>
+                        <input type="text" placeholder= "#..."/>
+                        <button>Choose</button>
+                    </div>
+                    <div className="column">
+                        <span>Accent 1</span>
+                        <input type="text" placeholder="#..." />
+                        <button>Choose</button>
+                        <span>Accent 2</span>
+                        <input type="text" placeholder="#..." />
+                        <button>Choose</button>
+                        <span>Accent 3</span>
+                        <input type="text" placeholder="#..." />
+                        <button>Choose</button>
+                        <span>Accent 4</span>
+                        <input type="text" placeholder="#..." />
+                        <button>Choose</button>
+                        <span>Accent 5</span>
+                        <input type="text" placeholder="#..." />
+                        <button>Choose</button>
+                        <span>Accent 6</span>
+                        <input type="text" placeholder="#..." />
+                        <button>Choose</button>
+                        <span>Accent 7</span>
+                        <input type="text" placeholder="#..." />
+                        <button>Choose</button>
+                    </div>
+                </div>
             </div>
        );
     }

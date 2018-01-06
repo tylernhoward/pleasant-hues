@@ -3,5 +3,18 @@
     width: 100%;
     border-style: solid;
     border-width: 1px;
-    border-color: black;
+    border-color: #AAAAAA;
+    background-color: whitesmoke;
+}
+.colorOptions{
+    display:flex;
+    flex-direction: row;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+}
+.colorPrompt{
+    display: flex;
+    flex-direction:row;
 }
