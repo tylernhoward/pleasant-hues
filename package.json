@@ -4,9 +4,9 @@
   "private": true,
   "dependencies": {
     "react": "^16.1.1",
+    "react-color": "^2.13.8",
     "react-dom": "^16.1.1",
-    "react-scripts": "1.0.17",
-    "reactstrap": "^5.0.0-alpha.4"
+    "react-scripts": "1.0.17"
   },
   "scripts": {
     "start": "react-scripts start",
