@@ -1,60 +1,30 @@
 import React, { Component } from 'react';
 import './color-pane.css'
 import ColorPicker from './color-picker';
+import ColorPrompt from './color-prompt';
 
 class ColorPane extends Component {
+    constructor(){
+        super();
+        this.createPrompts();
+    }
+    createPrompts(type){
+        var prompts = [];
+        for(var i = 1; i <= 7; i++){
+            prompts.push(<ColorPrompt type={type} index={i} key={i} />);
+        }
+        return prompts;
+    }
     render(){
        return(
             <div className = "color-pane">
                 <h4>Fill in the colors below</h4>
                 <div className="colorOptions">
                     <div className="column">
-                        <div className="colorPrompt">
-                        <span>Color 1</span>
-                        <input type="text" placeholder= "#..."/>
-                        <button>Choose</button>
-                        </div>
-                        <span>Color 2</span>
-                        <input type="text" placeholder="#..." />
-                        <button>Choose</button>
-                        <span>Color 3</span>
-                        <input type="text" placeholder="#..." />
-                        <button>Choose</button>
-                        <span>Color 4</span>
-                        <input type="text" placeholder="#..." />
-                        <button>Choose</button>
-                        <span>Color 5</span>
-                        <input type="text" placeholder="#..." />
-                        <button>Choose</button>
-                        <span>Color 6</span>
-                        <input type="text" placeholder="#..." />
-                        <button>Choose</button>
-                        <span>Color 7</span>
-                        <input type="text" placeholder= "#..."/>
-                        <button>Choose</button>
+                        {this.createPrompts("Color")}
                     </div>
                     <div className="column">
-                        <span>Accent 1</span>
-                        <input type="text" placeholder="#..." />
-                        <button>Choose</button>
-                        <span>Accent 2</span>
-                        <input type="text" placeholder="#..." />
-                        <button>Choose</button>
-                        <span>Accent 3</span>
-                        <input type="text" placeholder="#..." />
-                        <button>Choose</button>
-                        <span>Accent 4</span>
-                        <input type="text" placeholder="#..." />
-                        <button>Choose</button>
-                        <span>Accent 5</span>
-                        <input type="text" placeholder="#..." />
-                        <button>Choose</button>
-                        <span>Accent 6</span>
-                        <input type="text" placeholder="#..." />
-                        <button>Choose</button>
-                        <span>Accent 7</span>
-                        <input type="text" placeholder="#..." />
-                        <button>Choose</button>
+                       {this.createPrompts("Accent")}
                     </div>
                 </div>
             </div>

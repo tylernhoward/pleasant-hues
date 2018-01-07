@@ -8,13 +8,11 @@
 }
 .colorOptions{
     display:flex;
+    margin: 25px;
     flex-direction: row;
+    justify-content: space-between;
 }
 .column{
     display: flex;
     flex-direction: column;
-}
-.colorPrompt{
-    display: flex;
-    flex-direction:row;
 }
