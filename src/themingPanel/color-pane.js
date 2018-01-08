@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './color-pane.css'
-import ColorPicker from './color-picker';
 import ColorPrompt from './color-prompt';
 
 class ColorPane extends Component {
