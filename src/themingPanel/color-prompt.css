@@ -1,5 +1,16 @@
 .colorPrompt {
     display: flex;
     flex-direction: row;
+    padding-bottom: 10px;
+}
+.colorPrompt span, input, button {
+    margin: 10px;
+    max-height: 30px;
+    min-height:30px;
+}
+.popup{
+    height: 0px;
+    
     background-color: black;
+    
 }

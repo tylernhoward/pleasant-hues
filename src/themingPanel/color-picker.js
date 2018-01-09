@@ -16,6 +16,7 @@ class ColorPicker extends Component {
             <ChromePicker
                 color={this.state.background}
                 onChange={this.handleChange}
+                onMouseDown={()=>console.log("Fuck")}
             />
         );
     }
