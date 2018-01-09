@@ -11,13 +11,12 @@ class HueTitle extends Component {
     }
     createLetters() {
         var letters = [];
-        for (var i = 1; i <= 13; i++) {
-            letters.push(<span id={"l"+i} key= {i}>{this.state.titleLetters[i-1]}</span>);
+        for (var i = 0; i <= 12; i++) {
+            letters.push(<span id={"l"+(i%7)} key= {i}>{this.state.titleLetters[i]}</span>);
         }
         return letters;
     }
     render() {
-        // TODO Automate this with a prop and an index,that automatically colors the letters.
         return (
             <div className = "hueTitle">
             <h1 className="App-title">

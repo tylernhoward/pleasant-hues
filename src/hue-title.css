@@ -4,64 +4,32 @@
     color: white;
 }
 
-#l1:hover {
+#l0:hover {
     color: #FF4136;
+}
+
+#l1:hover {
+    color: #FF851B;
 }
 
 #l2:hover {
-    color: #FF851B;
+    color: #FFDC00;
 }
 
 #l3:hover {
-    color: #FFDC00;
+    color: #2ECC40;
 }
 
 #l4:hover {
-    color: #2ECC40;
+    color: #0074D9;
 }
 
 #l5:hover {
-    color: #0074D9;
+    color: #B10DC9;
 }
 
 #l6:hover {
-    color: #B10DC9;
-}
-
-#l7:hover {
     color: #F012BE;
-}
-
-#l8:hover {
-    color: #FF4136;
-}
-
-#l9:hover {
-    color: #FF851B;
-}
-
-#l10:hover {
-    color: #FFDC00;
-}
-
-#l11:hover {
-    color: #2ECC40;
-}
-
-#l12:hover {
-    color: #0074D9;
-}
-
-#l13:hover {
-    color: #B10DC9;
-}
-
-#l14:hover {
-    color: #F012BE;
-}
-
-#l15:hover {
-    color: #FF4136;
 }
 
 .App-intro {
