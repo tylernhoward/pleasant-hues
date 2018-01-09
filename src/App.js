@@ -5,11 +5,12 @@ import ColorPane from './themingPanel/color-pane';
 import PreviewPane from './previewPanel/preview-pane';
 import HueTitle from './hue-title';
 class App extends Component {
+  
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <HueTitle/>
+          <HueTitle title={"Pleasant Hues"}/>
         </header>
         <div className="wrapper">
           <ColorPane/>

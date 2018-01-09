@@ -3,10 +3,6 @@ import './color-pane.css'
 import ColorPrompt from './color-prompt';
 
 class ColorPane extends Component {
-    constructor(){
-        super();
-        this.createPrompts();
-    }
     createPrompts(type){
         var prompts = [];
         for(var i = 1; i <= 7; i++){
