@@ -8,7 +8,7 @@ class ColorPicker extends Component {
     };
 
     handleChange = (color, event) => {
-        //this.setState({ background: color.hex });
+        this.setState({ background: color.hex });
         this.props.setColor(color.hex);
         console.log(this.state.background);
     };

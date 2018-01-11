@@ -5,21 +5,22 @@ import './color-prompt.css'
 
 class ColorPrompt extends Component {
     state = {
+        color: this.props.savedColor,
         type: this.props.type,
         index: this.props.index,
         showPicker: false
     };
-    renderPicker(){
-        if (!this.state.showPicker) return ''; 
-        else return (<ColorPicker/>);
+
+    onChange(value) {
+        this.props.setColor(value);
     }
+
 
     render() {
         return (
-            <div className="colorPrompt">
-                <span>{this.state.type} {this.state.index}</span>
-                <p>{this.props.savedColor}</p>
-                <input type="text" placeholder="#..."/>
+            <div className="colorPrompt" style={{ border: `1px solid ${this.props.savedColor}` }}>
+                <span>{this.state.type} {this.state.index + 1}</span>
+                <input type="text" placeholder="#..." onChange={(e) => this.onChange(e.target.value)} value={this.props.savedColor}/>
                 <button onClick={() => this.setState({ showPicker: !this.state.showPicker })}>Choose</button>
                 {this.state.showPicker ? <div className="popup"><ColorPicker background = {this.props.savedColor} /></div> : null}
                 
