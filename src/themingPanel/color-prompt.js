@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from "react-redux";
 import ColorPicker from './color-picker';
 import './color-prompt.css'
 
@@ -17,13 +18,31 @@ class ColorPrompt extends Component {
         return (
             <div className="colorPrompt">
                 <span>{this.state.type} {this.state.index}</span>
-                <input type="text" placeholder="#..." />
+                <p>{this.props.savedColor}</p>
+                <input type="text" placeholder="#..."/>
                 <button onClick={() => this.setState({ showPicker: !this.state.showPicker })}>Choose</button>
-                
-                {this.state.showPicker ? <div className="popup"><ColorPicker /></div> : null}
+                {this.state.showPicker ? <div className="popup"><ColorPicker background = {this.props.savedColor} /></div> : null}
                 
             </div>
         );
     }
 }
-export default ColorPrompt;
+
+const mapStateToProps = (state) => {
+    return {
+        savedColor: state.color,
+    };
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        setColor: (color) => {
+            dispatch({
+                type: "SET_COLOR",
+                payload: color
+            });
+        }
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(ColorPrompt);

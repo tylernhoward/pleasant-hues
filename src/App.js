@@ -11,13 +11,13 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <HueTitle title={"Pleasant Hues"}/>
+        
         </header>
         <div className="wrapper">
           <ColorPane/>
           <PreviewPane/>
         </div>
         <footer className="footer">
-          <p>Updated 2018</p>
           <a href="https://github.com/tylernhoward/pleasant-hues" role="button">
             <img alt="github icon" src={logo}/>
           </a>

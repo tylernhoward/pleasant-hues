@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux'
 import { ChromePicker } from 'react-color';
 
 class ColorPicker extends Component {
     state = {
-        background: '#fff',
+        background: this.props.background,
     };
 
     handleChange = (color, event) => {
-        this.setState({ background: color.hex });
+        //this.setState({ background: color.hex });
+        this.props.setColor(color.hex);
         console.log(this.state.background);
     };
 
@@ -16,9 +18,26 @@ class ColorPicker extends Component {
             <ChromePicker
                 color={this.state.background}
                 onChange={this.handleChange}
-                onMouseDown={()=>console.log("Fuck")}
+                onMouseDown={()=>console.log("mouse down")}
             />
         );
     }
 }
-export default ColorPicker;
+const mapStateToProps = (state) => {
+    return {
+        savedColor: state.color,
+    };
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        setColor: (color) => {
+            dispatch({
+                type: "SET_COLOR",
+                payload: color
+            });
+        }
+    };
+};
+
+export default connect(mapStateToProps,mapDispatchToProps)(ColorPicker);
