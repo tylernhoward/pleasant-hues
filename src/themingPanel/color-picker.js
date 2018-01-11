@@ -9,7 +9,7 @@ class ColorPicker extends Component {
 
     handleChange = (color, event) => {
         this.setState({ background: color.hex });
-        this.props.setColor(color.hex);
+        this.props.setColor(color.hex,this.props.index);
         console.log(this.state.background);
     };
 
@@ -25,19 +25,20 @@ class ColorPicker extends Component {
 }
 const mapStateToProps = (state) => {
     return {
-        savedColor: state.color,
+        savedColors: state.colors,
     };
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        setColor: (color) => {
+        setColor: (color, index) => {
             dispatch({
                 type: "SET_COLOR",
+                id: index,
                 payload: color
             });
         }
-    };
+    }
 };
 
 export default connect(mapStateToProps,mapDispatchToProps)(ColorPicker);

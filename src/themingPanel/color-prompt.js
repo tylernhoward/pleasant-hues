@@ -6,23 +6,20 @@ import './color-prompt.css'
 class ColorPrompt extends Component {
     state = {
         color: this.props.savedColor,
-        type: this.props.type,
-        index: this.props.index,
         showPicker: false
     };
 
     onChange(value) {
-        this.props.setColor(value);
+        this.props.setColor(value, this.props.index);
     }
-
 
     render() {
         return (
-            <div className="colorPrompt" style={{ border: `1px solid ${this.props.savedColor}` }}>
-                <span>{this.state.type} {this.state.index + 1}</span>
-                <input type="text" placeholder="#..." onChange={(e) => this.onChange(e.target.value)} value={this.props.savedColor}/>
+            <div className="colorPrompt" style={{ border: `2px solid ${this.props.savedColors[this.props.index].color}` }}>
+                <span>{this.props.type} {(this.props.index %7) + 1}</span>
+                <input type="text" placeholder="#..." onChange={(e) => this.onChange(e.target.value)} value={this.props.savedColors[this.props.index].color}/>
                 <button onClick={() => this.setState({ showPicker: !this.state.showPicker })}>Choose</button>
-                {this.state.showPicker ? <div className="popup"><ColorPicker background = {this.props.savedColor} /></div> : null}
+                {this.state.showPicker ? <div className="popup"><ColorPicker background={this.props.savedColors[this.props.index].color} index={this.props.index}/></div> : null}
                 
             </div>
         );
@@ -31,19 +28,19 @@ class ColorPrompt extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        savedColor: state.color,
+        savedColors: state.colors,
     };
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        setColor: (color) => {
+        setColor: (color,index) => {
             dispatch({
                 type: "SET_COLOR",
+                id: index,
                 payload: color
             });
         }
     };
 };
-
 export default connect(mapStateToProps, mapDispatchToProps)(ColorPrompt);

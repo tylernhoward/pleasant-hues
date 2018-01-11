@@ -5,7 +5,14 @@ import ColorPrompt from './color-prompt';
 class ColorPane extends Component {
     createPrompts(type){
         var prompts = [];
-        for(var i = 0; i <= 6; i++){
+        if(type=="Color"){
+            var a = 0;
+            var b = 6;
+        }else{
+            var a = 7;
+            var b = 13;
+        }
+        for(var i = a; i <= b; i++){
             prompts.push(<ColorPrompt type={type} index={i} key={i} />);
         }
         return prompts;
