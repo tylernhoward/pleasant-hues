@@ -13,8 +13,10 @@ class PreviewPane extends Component {
                         </div>
                     </div>
                     <div id = "terminal">
-                    <p>asfdsadf</p>
+                    <p>This is a preview</p>
                     </div>
+                <div className="settings-button"><span className="fa fa-cog fa-2x"></span></div>
+
             </div>
         );
     }

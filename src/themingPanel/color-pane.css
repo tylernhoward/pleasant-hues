@@ -18,11 +18,16 @@ h4{
     display:flex;
     margin: 25px;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 .column{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
 }
  .save-button {
      border: 1px solid black;

@@ -8,20 +8,20 @@ import registerServiceWorker from './registerServiceWorker';
 
 var initialState = {
     colors: [
-        { 'id': 0, 'color': '#123' },
-        { 'id': 1, 'color': '#432' },
-        { 'id': 2, 'color': '#765' },
-        { 'id': 3, 'color': '#534' },
-        { 'id': 4, 'color': '#867' },
-        { 'id': 5, 'color': '#aaa' },
-        { 'id': 6, 'color': '#fff' },
-        { 'id': 7, 'color': '#eee' },
-        { 'id': 8, 'color': '#543' },
-        { 'id': 9, 'color': '#999' },
-        { 'id': 10, 'color': '#143' },
-        { 'id': 11, 'color': '#643' },
-        { 'id': 12, 'color': '#865' },
-        { 'id': 13, 'color': '#fff' },
+        { 'id': 0, 'color': '#FF4136' },
+        { 'id': 1, 'color': '#FF851B' },
+        { 'id': 2, 'color': '#FFDC00' },
+        { 'id': 3, 'color': '#2ECC40' },
+        { 'id': 4, 'color': '#0074D9' },
+        { 'id': 5, 'color': '#B10DC9' },
+        { 'id': 6, 'color': '#F012BE' },
+        { 'id': 7, 'color': '#FF4136' },
+        { 'id': 8, 'color': '#FF851B' },
+        { 'id': 9, 'color': '#FFDC00' },
+        { 'id': 10, 'color': '#2ECC40' },
+        { 'id': 11, 'color': '#0074D9' },
+        { 'id': 12, 'color': '#B10DC9' },
+        { 'id': 13, 'color': '#F012BE' },
     ]
 };
 

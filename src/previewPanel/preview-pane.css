@@ -10,6 +10,14 @@
     border-width: 1px;
     border-color: #AAAAAA;
 }
+.settings-button {
+    color: white;
+    position: absolute;
+    right: 3%;
+    bottom: 3%;
+    z-index: 99 !important;
+}
+
 #window {
     position: relative;
     height: 20px;
@@ -26,6 +34,8 @@
 }
 
 
+/*TERMINAL PREVIEW*/
+
 #terminal {
     position:relative;
     box-sizing: border-box;
@@ -35,6 +45,12 @@
     background-color: #111111;
     height: 100%;
 }
+
+
+
+
+
+/*SLACK PREVIEW*/
 #slack{
     position: relative;
     height: 100%;
@@ -65,3 +81,4 @@
     margin-right: 5%;
     margin-bottom: 25px;
 }
+
