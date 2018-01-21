@@ -1,10 +1,20 @@
-html{
-  font-family: sans-serif;
-  margin: 0px;
+* {
+  box-sizing: border-box;
   padding: 0px;
-  position: relative;
-  min-height: 100%
+  margin: 0px;
 }
+
+html{
+    font-family: 'Avenir',
+    Helvetica,
+    Arial,
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  min-height: 100%;
+}
+
 .App-header{
   height:100%;
   padding-top:25px;
@@ -17,17 +27,16 @@ html{
   border-bottom-width: 1px;
 }
 .wrapper {
+  flex: 1 0 auto;
   background-color: white;
   display: flex;
   flex-direction: row;
   width: 100%;
   height:100%;
-  justify-content: space-between;
-  margin-bottom: 125px;
+  justify-content: center;
 }
 .footer{
-  position: absolute;
-  bottom: 0;
+  flex-shrink: 0;
   width: 100%;
   height: 125px;
   display: flex;

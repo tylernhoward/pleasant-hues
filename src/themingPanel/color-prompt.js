@@ -18,9 +18,9 @@ class ColorPrompt extends Component {
             <div className="colorPrompt" style={{ border: `2px solid ${this.props.savedColors[this.props.index].color}` }}>
                 <span>{this.props.type} {(this.props.index %7) + 1}</span>
                 <input type="text" placeholder="#..." onChange={(e) => this.onChange(e.target.value)} value={this.props.savedColors[this.props.index].color}/>
-                <button onClick={() => this.setState({ showPicker: !this.state.showPicker })}>Choose</button>
-                {this.state.showPicker ? <div className="popup"><ColorPicker background={this.props.savedColors[this.props.index].color} index={this.props.index}/></div> : null}
-                
+                <a className = "button" onClick={() => this.setState({ showPicker: !this.state.showPicker })}>Choose</a> 
+                {this.state.showPicker ? <div className="popup"><ColorPicker background={this.props.savedColors[this.props.index].color} index={this.props.index} /></div> : null}
+          
             </div>
         );
     }

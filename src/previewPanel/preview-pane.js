@@ -5,18 +5,16 @@ class PreviewPane extends Component {
     render() {
         return (
             <div className="preview-pane">
-                <div id="terminal">
-                    <div id="termWindow">
-                        <div className="termButtons">
-                            <div className="termCircles" style={{backgroundColor:"tomato"}}></div>
-                            <div className="termCircles" style={{backgroundColor:"gold"}}></div>
-                            <div className="termCircles" style={{backgroundColor:"limegreen"}}></div>
+                    <div id="window">
+                        <div className="ctrlButtons">
+                            <div className="ctrlCircles" style={{backgroundColor:"tomato"}}></div>
+                            <div className="ctrlCircles" style={{backgroundColor:"gold"}}></div>
+                            <div className="ctrlCircles" style={{backgroundColor:"limegreen"}}></div>
                         </div>
                     </div>
-                    <div id="interestTerm">
-                        <p>Preview</p>
+                    <div id = "terminal">
+                    <p>asfdsadf</p>
                     </div>
-                </div>
             </div>
         );
     }
