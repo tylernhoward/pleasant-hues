@@ -1,7 +1,4 @@
-```diff
-+ this will be highlighted in green
-- this will be highlighted in red
-```
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
